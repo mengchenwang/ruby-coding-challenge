@@ -14,7 +14,7 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-  0 - (number.abs)
+  -(number.abs)
 end
 
 # swap the keys and values in a hash. e.g.
@@ -67,6 +67,7 @@ end
 # get the domain name *without* the .com part, from an email address
 # so onboarding@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  email[/\@(.*?)\./, 1]
 end
 
 # capitalize the first letter in each word of a string,
